@@ -1,4 +1,4 @@
-# **shader开发实战学习笔记**
+# **OpenGL shader开发实战学习笔记**
 
 ![](https://easyimage.elyt.cn/i/2025/03/19/5714209866365538396-2.webp)  
 

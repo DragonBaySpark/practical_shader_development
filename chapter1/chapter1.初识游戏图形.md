@@ -1,4 +1,4 @@
-shader开发实战学习笔记：初识游戏图形
+OpenGLshader开发实战学习笔记：第一章 初识游戏图形
 
 ![](https://easyimage.elyt.cn/i/2025/03/19/5714209866365538396-2.webp)  
 
