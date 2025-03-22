@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+demo/
+data/
+
+_md2/

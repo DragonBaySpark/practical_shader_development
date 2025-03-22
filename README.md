@@ -1,6 +1,6 @@
 # **shader开发实战学习笔记**
 
-![](http://easyimage.elyt.cn/i/2025/03/19/5714209866365538396-2.webp)  
+![](https://easyimage.elyt.cn/i/2025/03/19/5714209866365538396-2.webp)  
 
 
 # 参考资料
