@@ -9,7 +9,7 @@ int main( ){
 	settings.setSize(1024, 768);
 	settings.windowMode = OF_WINDOW; //can also be OF_FULLSCREEN
 
-	settings.setGLVersion(4, 1);//GL ∞Ê±æ…Ë÷√Œ™4.1
+	settings.setGLVersion(4, 1);// OPENGL 4.1
 	auto window = ofCreateWindow(settings);
 
 	ofRunApp(window, make_shared<ofApp>());

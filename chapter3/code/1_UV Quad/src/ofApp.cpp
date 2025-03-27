@@ -1,19 +1,43 @@
 #include "ofApp.h"
 
 //--------------------------------------------------------------
-void ofApp::setup(){
-	
-	//mesh.addVertex(glm::vec3(0, 0, 0.0));
-	//mesh.addVertex(glm::vec3(0, 768.0f, 0.0));
-	//mesh.addVertex(glm::vec3(1024, 768.0f, 0.0));
-	
-	mesh.addVertex(glm::vec3(-1.0f, 1.0f, 0.0f));
-	mesh.addVertex(glm::vec3(-1.0f, -1.0f, 0.0f));
-	mesh.addVertex(glm::vec3(1.0f, -1.0f, 0.0f));
 
-	shader.load("first_vertex.vert", "first_fragment.frag");
+/**
+ * @brief 初始化场景，创建一个带有颜色的四边形网格
+ *
+ * 该函数完成以下工作:
+ * 1. 添加四个顶点构成一个四边形(-1,-1)到(1,1)
+ * 2. 为每个顶点设置不同的颜色(红、绿、蓝、白)
+ * 3. 添加索引定义两个三角形组成四边形
+ * 4. 加载顶点着色器和片段着色器
+ */
+void ofApp::setup()
+{
+    // 添加第一个顶点，位于四边形左下角 (-1, -1, 0)
+    mesh.addVertex(glm::vec3(-1.0, -1.0f, 0.0));
+    // 添加第二个顶点，位于四边形右下角 (1, -1, 0)
+    mesh.addVertex(glm::vec3(1.0, -1.0f, 0.0));
+    // 添加第三个顶点，位于四边形右上角 (1, 1, 0)
+    mesh.addVertex(glm::vec3(1.0, 1.0f, 0.0));
+    // 添加第四个顶点，位于四边形左上角 (-1, 1, 0)
+    mesh.addVertex(glm::vec3(-1.0, 1.0f, 0.0));
+    // 为第一个顶点添加颜色，红色 (1, 0, 0)
+    mesh.addColor(ofFloatColor(1.0, 0.0, 0.0));
+    // 为第二个顶点添加颜色，绿色 (0, 1, 0)
+    mesh.addColor(ofFloatColor(0.0, 1.0, 0.0));
+    // 为第三个顶点添加颜色，蓝色 (0, 0, 1)
+    mesh.addColor(ofFloatColor(0.0, 0.0, 1.0));
+    // 为第四个顶点添加颜色，白色 (1, 1, 1)
+    mesh.addColor(ofFloatColor(1.0, 1.0, 1.0));
+
+    // 定义一个包含 6 个索引的数组，用于描述两个三角形的顶点连接顺序
+    ofIndexType indices[6] = { 0, 1, 2,  2, 3 ,0};
+    // 将索引数组添加到网格中，指定使用 6 个索引
+    mesh.addIndices(indices, 6);
+    
+    // 加载顶点着色器和片段着色器
+    shader.load("vertex.vert", "fragment.frag");
 }
-
 //--------------------------------------------------------------
 /**
  * @brief 绘制场景的主要函数。
@@ -23,11 +47,6 @@ void ofApp::setup(){
  * 然后绘制网格，最后调用着色器的 end() 方法来停用着色器。
  */
 void ofApp::draw(){
-    
-	
-    
-    //ofLoadIdentityMatrix();
-
     // 开始使用着色器，准备进行渲染
     shader.begin();
     // 绘制之前设置好的网格
