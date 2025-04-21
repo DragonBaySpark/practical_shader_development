@@ -18,3 +18,6 @@
 10.[Learn OpenGL, extensive tutorial resource for learning Modern OpenGL](https://learnopengl.com/)  
 11. [OpenGL初学者指南-CSDN博客](https://blog.csdn.net/lady_killer9/article/details/89249300)  
 12. [OpenGL经典教程及书籍推荐_opengl官方教材-CSDN博客](https://blog.csdn.net/lady_killer9/article/details/89249371)  
+
+联系方式：
+QQ: 2025758718
